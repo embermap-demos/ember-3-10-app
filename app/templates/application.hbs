@@ -1,3 +1,37 @@
 <h1>
   Hello, 3.10!
 </h1>
+
+{{!-- {{some-component name="Tom" class="my-class"}}
+
+<SomeComponent @name="Yehuda" class="my-class" /> --}}
+
+{{some-component someData}}
+
+<SomeComponent />
+
+<Forms::Label as |label|>
+  I am a label for {{label.formId}}
+  <label.Input @foo="bar" @placeholder="Fill me in" />
+</Forms::Label>
+
+<Forms::Label as |label|>
+  I am a label for {{label.formId}}
+  <label.Input @foo="bar" placeholder="Fill me in" />
+</Forms::Label>
+
+<SortableGroup
+  @model={{model.items}}
+  @onChange={{action "reorderItems"}} as |group|
+>
+  {{#each group.model as |modelItem|}}
+    <group.item @model={{item}} as |item|>
+      {{modelItem.name}}
+      <item.handle>
+        <span class="handle">
+          &varr;
+        </span>
+      </item.handle>
+    </group.item>
+  {{/each}}
+</SortableGroup>
