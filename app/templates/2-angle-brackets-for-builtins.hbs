@@ -1,9 +1,75 @@
-<h2>
-  Angle Bracket Invocation for Built-In Components (2 of 4)
+<h1>
+  Angle Bracket Invocation for Built-In Components
+</h1>
+
+<hr />
+
+{{!-- <h2>
+  Link To
 </h2>
 
-{{link-to "Parent inline" "parent-static"}}
+<h3>
+  Static route
+</h3>
 
-{{#link-to "parent-static"}}
-  Parent block
-{{/link-to}}
+{{link-to "Static route inline" "static-route"}}
+
+{{#link-to "static-route"}}
+  Static route block
+{{/link-to}} --}}
+
+{{!-- <h3>
+  Dynamic route (with one model)
+</h3>
+
+{{link-to "Dynamic route inline" "dynamic-route" "model-1"}}
+
+{{#link-to "dynamic-route" "model-1"}}
+  Dynamic route block
+{{/link-to}} --}}
+
+{{!-- <h3>
+  Dynamic route (with multiple models)
+</h3>
+
+{{#link-to "dynamic-route.dynamic-child" "model-1" "model-2"}}
+  Dynamic route, multiple models
+{{/link-to}} --}}
+
+{{!-- <hr />
+
+<h2>
+  Input
+</h2>
+
+{{input value=this.name placeholder="name"}}
+
+<p>
+  The value is {{this.name}}
+</p> --}}
+
+{{!-- <label>
+  {{input type="checkbox" checked=this.isAdmin}}
+  Admin
+</label>
+
+<p>
+  Admin? {{if this.isAdmin "Yes" "No"}}
+</p> --}}
+
+{{!-- 
+<hr />
+
+<h2>
+  Textarea
+</h2>
+
+<div>
+  {{textarea value=this.body}}
+</div>
+
+The body is:
+
+<div>
+  {{this.body}}
+</div> --}}
