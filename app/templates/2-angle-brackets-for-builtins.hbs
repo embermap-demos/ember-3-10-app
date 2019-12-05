@@ -12,29 +12,29 @@
   Static route
 </h3>
 
-{{link-to "Static route inline" "static-route"}}
+<LinkTo @route="static-route">Static route inline</LinkTo>
 
-{{#link-to "static-route"}}
+<LinkTo @route="static-route">
   Static route block
-{{/link-to}}
+</LinkTo>
 
 <h3>
   Dynamic route (with one model)
 </h3>
 
-{{link-to "Dynamic route inline" "dynamic-route" "model-1"}}
+<LinkTo @route="dynamic-route" @model="model-1">Dynamic route inline</LinkTo>
 
-{{#link-to "dynamic-route" "model-1"}}
+<LinkTo @route="dynamic-route" @model="model-1">
   Dynamic route block
-{{/link-to}}
+</LinkTo>
 
 <h3>
   Dynamic route (with multiple models)
 </h3>
 
-{{#link-to "dynamic-route.dynamic-child" "model-1" "model-2"}}
+<LinkTo @route="dynamic-route.dynamic-child" @models={{array "model-1" "model-2"}}>
   Dynamic route, multiple models
-{{/link-to}}
+</LinkTo>
 
 <hr />
 
@@ -42,14 +42,14 @@
   Input
 </h2>
 
-{{input value=this.name placeholder="name"}}
+<Input @value={{this.name}} placeholder="name" />
 
 <p>
   The value is {{this.name}}
 </p>
 
 <label>
-  {{input type="checkbox" checked=this.isAdmin}}
+  <Input @type="checkbox" @checked={{this.isAdmin}} />
   Admin
 </label>
 
@@ -64,7 +64,7 @@
 </h2>
 
 <div>
-  {{textarea value=this.body}}
+  <Textarea @value={{this.body}} />
 </div>
 
 The body is:
