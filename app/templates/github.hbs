@@ -4,4 +4,25 @@
 
 <hr class='my-4'>
 
-{{outlet}}
+<nav class='text-gray-600'>
+  {{#each this.activeRoutes as |route|}}
+    {{#if (eq route.localName 'index')}}
+      {{!-- Don't need breadcrumb for index pages --}}
+    {{else if (or
+      (eq route.name this.router.currentRoute.name)
+      (eq route.child.localName 'index')
+    )}}
+      {{route.localName}}
+    {{else}}
+      <LinkTo @route={{route.name}} class='text-blue-500'>
+        {{route.localName}}
+      </LinkTo>
+
+      <span class='px-1'>></span>
+    {{/if}}
+  {{/each}}
+</nav>
+
+<div class='mt-2'>
+  {{outlet}}
+</div>

@@ -16,6 +16,7 @@ Router.map(function() {
   });
 
   this.route("github", function() {
+    this.route("about");
     this.route("org", { path: ":org" }, function() {
       this.route("repo", { path: ":repo" }, function() {
         this.route("releases", function() {
