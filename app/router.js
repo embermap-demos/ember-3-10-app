@@ -27,6 +27,4 @@ Router.map(function() {
   });
 });
 
-// https://api.github.com/repos/emberjs/ember.js/releases
-
 export default Router;

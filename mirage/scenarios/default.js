@@ -18,7 +18,19 @@ export default function(server) {
           },
           {
             id: "data",
-            name: "Data"
+            name: "Data",
+            releases: [
+              { id: "v3.17.0-alpha.1" },
+              { id: "v3.17.0-alpha.0" },
+              { id: "v3.16.0-beta.0" },
+              { id: "v3.15.0" },
+              { id: "v3.14.1" },
+              { id: "v3.16.0-alpha.3" },
+              { id: "v3.8.1" },
+              { id: "v3.16.0-alpha.2" },
+              { id: "v3.16.0-alpha.1" },
+              { id: "v3.16.0-alpha.0" }
+            ]
           },
           {
             id: "rfcs",
@@ -32,7 +44,27 @@ export default function(server) {
       },
       {
         id: "miragejs",
-        name: "Mirage JS"
+        name: "Mirage JS",
+        repos: [
+          {
+            id: "miragejs",
+            name: "Mirage JS",
+            releases: [
+              { id: "v0.1.32" },
+              { id: "v0.1.31" },
+              { id: "v0.1.30" },
+              { id: "v0.1.29" },
+              { id: "v0.1.28" },
+              { id: "v0.1.27" },
+              { id: "v0.1.27-beta.3" },
+              { id: "v0.1.26" }
+            ]
+          },
+          {
+            id: "site",
+            name: "Site"
+          }
+        ]
       }
     ]
   });

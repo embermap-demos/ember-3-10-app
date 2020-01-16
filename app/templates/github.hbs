@@ -5,17 +5,12 @@
 <hr class='my-4'>
 
 <nav class='text-gray-600'>
-  {{#each this.activeRoutes as |route|}}
-    {{#if (eq route.localName 'index')}}
-      {{!-- Don't need breadcrumb for index pages --}}
-    {{else if (or
-      (eq route.name this.router.currentRoute.name)
-      (eq route.child.localName 'index')
-    )}}
-      {{route.localName}}
+  {{#each this.breadCrumbs as |breadCrumb|}}
+    {{#if breadCrumb.isCurrentPage}}
+      {{breadCrumb.label}}
     {{else}}
-      <LinkTo @route={{route.name}} class='text-blue-500'>
-        {{route.localName}}
+      <LinkTo @route={{breadCrumb.route}} class='text-blue-500'>
+        {{breadCrumb.label}}
       </LinkTo>
 
       <span class='px-1'>></span>
