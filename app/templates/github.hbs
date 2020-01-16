@@ -4,20 +4,6 @@
 
 <hr class='my-4'>
 
-<nav class='text-gray-600'>
-  {{#each this.breadCrumbs as |breadCrumb|}}
-    {{#if breadCrumb.isCurrentPage}}
-      {{breadCrumb.label}}
-    {{else}}
-      <LinkTo @route={{breadCrumb.route}} class='text-blue-500'>
-        {{breadCrumb.label}}
-      </LinkTo>
-
-      <span class='px-1'>></span>
-    {{/if}}
-  {{/each}}
-</nav>
-
 <div class='mt-2'>
   {{outlet}}
 </div>

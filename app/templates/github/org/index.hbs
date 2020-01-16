@@ -4,7 +4,7 @@
 
 <div class="mt-2">
   {{#each model.repos as |repo|}}
-    <div class=''>
+    <div>
       <LinkTo @route='github.org.repo' @models={{array model.id repo.id}} class='hover:underline'>
         {{repo.id}}
       </LinkTo>
