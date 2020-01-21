@@ -1,0 +1,20 @@
+<h1 class='text-3xl font-semibold'>Orgs</h1>
+
+<nav class='mt-2'>
+  <div>
+    <LinkTo @route='github.org' @model='emberjs' class='hover:underline' @activeClass='underline'>
+      Ember.js
+    </LinkTo>
+  </div>
+  <div>
+    <LinkTo @route='github.org' @model='miragejs' class='hover:underline' @activeClass='underline'>
+      Mirage JS
+    </LinkTo>
+  </div>
+</nav>
+
+<hr class='w-20 mt-8 mb-4'>
+
+<LinkTo @route='github.about' class='text-blue-500'>
+  About
+</LinkTo>

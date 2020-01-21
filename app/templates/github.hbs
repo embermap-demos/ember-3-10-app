@@ -1,0 +1,22 @@
+<div class='py-2' />
+
+<h2 class='text-xl'>GitHub Browser</h2>
+
+<hr class='my-4'>
+
+<nav>
+  {{#each this.breadcrumbs as |breadcrumb|}}
+    {{#if breadcrumb.isCurrentPage}}
+      <span>{{breadcrumb.label}}</span>
+    {{else}}
+      <LinkTo @route={{breadcrumb.route}} class='text-blue-500'>
+        {{breadcrumb.label}}
+      </LinkTo>
+      <span class='px-1'>></span>
+    {{/if}}
+  {{/each}}
+</nav>
+
+<div class='mt-2'>
+  {{outlet}}
+</div>

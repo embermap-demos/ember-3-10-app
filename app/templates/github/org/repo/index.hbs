@@ -1,0 +1,11 @@
+<h1 class='text-3xl font-semibold'>
+  {{model.name}} – Releases
+</h1>
+
+<div class="mt-2">
+  {{#each model.releases as |release|}}
+    <div>
+      {{release.id}}
+    </div>
+  {{/each}}
+</div>

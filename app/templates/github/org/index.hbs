@@ -1,0 +1,13 @@
+<h1 class='text-3xl font-semibold'>
+  {{model.name}} – Repos
+</h1>
+
+<div class="mt-2">
+  {{#each model.repos as |repo|}}
+    <div>
+      <LinkTo @route='github.org.repo' @models={{array model.id repo.id}} class='hover:underline'>
+        {{repo.id}}
+      </LinkTo>
+    </div>
+  {{/each}}
+</div>

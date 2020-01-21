@@ -14,6 +14,17 @@ Router.map(function() {
   this.route("dynamic-route", { path: "/:slug" }, function() {
     this.route("dynamic-child", { path: "/:child_slug" });
   });
+
+  this.route("github", function() {
+    this.route("about");
+    this.route("org", { path: ":org" }, function() {
+      this.route("repo", { path: ":repo" }, function() {
+        this.route("releases", function() {
+          this.route("release", { path: ":release" });
+        });
+      });
+    });
+  });
 });
 
 export default Router;
